@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-
-import {  throwError } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  private SERVER_URL = "http://localhost:3000/products";
+  private SERVER_URL = 'http://localhost:3000/products';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -27,10 +25,11 @@ export class ApiService {
     return throwError(errorMessage);
   }
 
-  public get(){  
-		return this.httpClient.get(this.SERVER_URL);  
-	}  
-  public sendGetRequest(){
+  public get() {
+    return this.httpClient.get(this.SERVER_URL);
+  }
+
+  public sendGetRequest() {
     return this.httpClient.get(this.SERVER_URL).pipe(catchError(this.handleError));
   }
 }
