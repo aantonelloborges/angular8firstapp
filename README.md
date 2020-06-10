@@ -1,6 +1,7 @@
-# Firstapp
+# angular8firstapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+Tutorial Reference:
+https://www.freecodecamp.org/news/angular-8-tutorial-in-easy-steps/
 
 ## Development server
 
